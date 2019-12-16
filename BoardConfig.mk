@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common s3ve3g
+# inherit from common matisse
 include device/samsung/matisse-common/BoardConfigCommon.mk
 
 # Assert
@@ -28,6 +28,9 @@ TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matisse3g/init/init_matiss
 
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
+
+# HIDL
+DEVICE_MANIFEST_FILE += device/samsung/matisse3g/manifest.xml
 
 # inherit from the proprietary version
 -include vendor/samsung/matisse3g/BoardConfigVendor.mk
