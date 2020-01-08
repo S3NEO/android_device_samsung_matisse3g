@@ -19,12 +19,11 @@ include device/samsung/matisse-common/BoardConfigCommon.mk
 # Assert
 TARGET_OTA_ASSERT_DEVICE := matisse,matisse3g
 
+# Build Fingerprint
+BUILD_FINGERPRINT := samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matisse3g_defconfig
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8226
-TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matisse3g/init/init_matisse.cpp
 
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
