@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_matisse3g.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_matisse3g-user \
+    lineage_matisse3g-userdebug \
+    lineage_matisse3g-eng
