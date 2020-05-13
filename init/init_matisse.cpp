@@ -53,7 +53,7 @@ void init_target_properties()
 	std::string platform = GetProperty("ro.board.platform", "");
 	if (platform != ANDROID_TARGET)
 		return;
-	
+
 	std::string bootloader = GetProperty("ro.bootloader", "");
 	if (bootloader.find("T530NU") == 0) {
 		/* matissewifiue */
@@ -73,7 +73,14 @@ void init_target_properties()
 		property_override("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOE6 release-keys");
 		property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T531");
 		property_override_dual("ro.product.device", "ro.vendor.product.device", "matisse3g");
-               gsm_properties();
+        gsm_properties();
+	} else if (bootloader.find("T532XX") == 0) {
+		/* matisse3gjvxx */
+		property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisse3gjv/matisse3g:5.0.2/LRX22G/T532JVS1BQB1:user/release-keys");
+		property_override("ro.build.description", "matisse3gjv-user 5.0.2 LRX22G T532JVS1BQB1 release-keys");
+		property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T532");
+		property_override_dual("ro.product.device", "ro.vendor.product.device", "matisse3gjv");
+        	gsm_properties();
 	} else if (bootloader.find("T535XX") == 0) {
 		/* matisseltexx */
 		property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXU1BOL1:user/release-keys");
@@ -83,7 +90,7 @@ void init_target_properties()
 	} else {
                gsm_properties();
 	}
-	
+
     std::string device = GetProperty("ro.product.device", "");
     LOG(ERROR) << "Found bootloader id " << bootloader <<  " setting build properties for "
         << device <<  " device" << std::endl;
