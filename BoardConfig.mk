@@ -19,9 +19,6 @@ include device/samsung/matisse-common/BoardConfigCommon.mk
 # Assert
 TARGET_OTA_ASSERT_DEVICE := matisse,matisse3g,matisse3gjv
 
-# Build Fingerprint
-BUILD_FINGERPRINT := samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys
-
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matisse3g_defconfig
 
