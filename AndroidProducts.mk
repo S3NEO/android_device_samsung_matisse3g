@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_matisse3g.mk
+    device/samsung/matisse3g/lineage_matisse3g.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_matisse3g-user \
