@@ -22,3 +22,5 @@ $(call inherit-product, device/samsung/matisse3g/full_matisse3g.mk)
 
 PRODUCT_DEVICE := matisse3g
 PRODUCT_NAME := lineage_matisse3g
+
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
